@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL = 'https://localhost:8080/explab'
+  expURL = 'http://localhost:8080/explab/'
 
   constructor(private httpClient: HttpClient) { }
 
@@ -28,6 +28,6 @@ export class SExperienciaService {
   }
 
   public delete(id: number): Observable<any>{
-    return this.httpClient.delete<any>(this.expURL + `delete/${id}`)
+    return this.httpClient.delete<any>(this.expURL + `delete/${id}`);
   }
 }

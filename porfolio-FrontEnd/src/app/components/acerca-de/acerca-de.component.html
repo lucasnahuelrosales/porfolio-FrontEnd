@@ -1,6 +1,12 @@
 <div class="row">
+    
+        <button type="button" class="btn btn-dark" routerLink="/editacercade/1" *ngIf="isLogged">
+            Editar
+        </button>
+    
+
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/foto_perfil.jpg" alt="foto_perfil" 
+        <img src={{persona.img}} alt="foto_perfil" 
         class="img-fluid" id="fotodeperfil">
     </div>
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -10,7 +16,7 @@
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
         <span>
             <h1>Acerca de mi</h1>
-            <p>Soy desarrollador web y estudiante de ingenieria Electromecanica...</p>
+            <p>{{persona.descripcion}}</p>
         </span>
     </div>
 </div>

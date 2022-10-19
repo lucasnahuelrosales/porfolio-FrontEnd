@@ -32,7 +32,7 @@ export class HysComponent implements OnInit {
   }
 
   delete(id: number){
-    if(id!= undefined){
+    if(id != undefined){
       this.skillS.delete(id).subscribe(
         dalta => {
           this.cargarSkills();

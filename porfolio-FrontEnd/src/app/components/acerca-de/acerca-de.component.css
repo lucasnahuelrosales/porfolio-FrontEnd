@@ -19,6 +19,12 @@ div{
         left: 3%;
         top: 490px;
     }
+
+    .descripcion{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
 @media(max-width:575px){

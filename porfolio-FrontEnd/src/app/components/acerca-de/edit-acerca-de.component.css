@@ -1,0 +1,12 @@
+.container{
+    background-color:rgb(41, 33, 33);
+    border-radius: 5px;
+}
+
+label{
+    color: rgb(243, 243, 243);
+}
+
+button{
+    margin-bottom: 12px;
+}

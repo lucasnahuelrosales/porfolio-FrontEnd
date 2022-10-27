@@ -1,16 +1,18 @@
-<div class="row">
-    <div class="container">
-        <div>
-            <img src="../../../assets/logoAP.png" alt="logo_argentina_programa" id="logoAP">
-        </div>
-        <div>
-            <ul>
-                <li class="nav__li"><a href="https://www.linkedin.com/in/nu%C3%B1ezr/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                <li class="nav__li"><a href="https://github.com/lucasnahuelrosales" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                <li class="nav__li"><a href="https://www.facebook.com/lucas.nunez.1614" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
-                <li class="nav__li login"><button type="button" class="btn btn-outline-dark" (click)="login()" *ngIf="!isLogged">Login</button></li>
-                <li class="nav__li login"><button type="button" class="btn btn-outline-dark" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button></li>
-            </ul>
-        </div>
+
+<nav>
+    <div>
+        <img src="../../../assets/logoAP.png" alt="logo_argentina_programa" id="logoAP">
     </div>
+    <div>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/nu%C3%B1ezr/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/lucasnahuelrosales" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://www.facebook.com/lucas.nunez.1614" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></li>
+            <li class="login"><button type="button" class="btn btn-outline-dark" (click)="login()" *ngIf="!isLogged">Login</button></li>
+            <li class="login"><button type="button" class="btn btn-outline-dark" (click)="onLogOut()" *ngIf="isLogged">Cerrar Sesión</button></li>
+        </ul>
+    </div>
+</nav>
+<div class="vacio">
+    
 </div>

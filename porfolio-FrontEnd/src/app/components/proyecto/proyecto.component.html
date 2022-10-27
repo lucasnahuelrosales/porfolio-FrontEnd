@@ -1,14 +1,31 @@
-<div class="row">
-    <h1>Proyecto</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7 parte1">
-            <h2>Porfolio</h2>
-            <p>lorem ipsum dolor sit amet con la associated
-                associatedasd
-            </p>
-        </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-            <img src="../../../assets/imagen_porfolio.PNG" alt="imagen_porfolio" class="img-fluid img-proyecto">
+<div class="contenedor">
+    <div class="titulo-añadir">
+        <h1>Proyectos</h1>
+        <button type="button" class="btn btn-dark" routerLink="/newproyecto" *ngIf="isLogged">
+            Añadir
+        </button>
+    </div>
+    <div class="contenedor-proyecto">
+        <div class="tarjeta-botones" *ngFor="let Proyecto of proyecto">
+            <div class="tarjeta">
+                <div>
+                    <img src={{Proyecto.imgP}} alt="imagen_porfolio">
+                </div>
+                <div class="nombre-descripcion">
+                    <h2>{{Proyecto.nombreP}}</h2>
+                    <p>
+                        {{Proyecto.descripcionP}}
+                    </p>
+                </div>
+            </div>
+            <div class="botones" *ngIf="isLogged">
+                <button type="button" class="btn btn-light" routerLink="/editproyecto/{{Proyecto.id}}">
+                    <i class="bi bi-pencil-square"></i>
+                </button>
+                <button type="button" class="btn btn-danger" (click)="borrar(Proyecto.id)">
+                    <i class="bi bi-trash"></i>
+                </button>  
+            </div>
         </div>
     </div>
 </div>

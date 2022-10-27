@@ -1,46 +1,79 @@
-.row{
-    padding: 20px;
-}
-
-div{
+.contenedor{
+    display:flex;
     background-color:aliceblue;
-    text-align: center
+    color:black;
+    padding: 0;
 }
 
-/*estilo de la foto de perfil*/
+.texto{
+    text-align:center;
+}
+
+.imagen{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+#fotodeperfil{
+    width:50%;
+    border:5px inset rgb(196, 16, 16);
+}
+
+#nombre{
+    font-weight:Bold;
+}
+
+button{
+    width:100%;
+}
+
+/*Vista mobile*/
+@media(max-width:575px){
+    .contenedor{
+        flex-direction:column;
+    }
+
+    #fotodeperfil{
+        width: 200px;
+        height: 200px;
+        border-radius: 100%;
+        object-fit: cover;
+    }
+
+    .imagen{
+        position:relative;
+        top:-100px;
+    }
+
+    .texto.primero{
+        margin-top:-100px;
+    }
+}
+
+/*Vista para escritorio*/
 @media(min-width:576px){
+    div .texto.primero{
+        justify-content: right;
+    }
+
     #fotodeperfil{
         position:absolute;
         width:200px;
         height: 200px;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
         object-fit: cover;
         left: 3%;
-        top: 490px;
+        top: 410px;
     }
 
-    .descripcion{
-        display:flex;
-        justify-content: center;
-        align-items: center;
+    .texto.primero{ 
+        margin-left: 35%;
+        margin-bottom: 1%;
     }
-}
 
-@media(max-width:575px){
-    #fotodeperfil{
-        position:absolute;
-        width:50%;
-        border-radius: 100%;
-        box-shadow: 3px 3px 3px grey;
-        object-fit: cover;
-        left: 25%;
-        top: 600px;
+    .texto.segundo{ 
+        margin-left: 15%;
+        margin-bottom: 1%;
     }
-}
-
-/*etiqueta nombe*/
-#nombre{
-    font-weight: bold;
-    margin-top: 30%;
 }

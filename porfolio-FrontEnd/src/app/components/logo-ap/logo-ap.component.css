@@ -1,7 +1,12 @@
-.container{
+nav{
+    width: 100%;
     display: flex;
+    background-color:rgb(206, 37, 37);
+    margin: 0;
     justify-content: space-between;
-    align-items: center;
+    position:fixed;
+    z-index: 70;
+    opacity: 0.97;
 }
 
 #logoAP{
@@ -14,32 +19,27 @@ ul{
     margin: 0;
     padding: 0;
     align-items: center;
+    justify-content: right;
 }
-.nav__li{
+
+li{
     margin: 4px;
 }
 
-.nav__li:hover > a {
-    color: rgb(192, 192, 192);
-}
-
-.nav__li a {
+li a {
     color: white;
     font-size: 30px;
+}
+
+li:hover > a {
+    color: rgb(192, 192, 192);
 }
 
 .fa-brands.fa-square-facebook{
     margin-right: 10px;
 }
 
-/*Para la vista de celular*/
-/*@media (max-width:575px){
-    .container {
-        flex-direction: column;
-    }
-    .redes{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}*/
+.vacio{
+    height: 60px;
+    width: 100%;
+}

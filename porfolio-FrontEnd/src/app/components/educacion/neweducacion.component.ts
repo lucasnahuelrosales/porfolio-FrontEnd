@@ -12,10 +12,9 @@ export class NeweducacionComponent implements OnInit {
   nombreE: string;
   descripcionE: string;
 
-  constructor(private educacionS: EducacionService, private router: Router) { }
+  constructor(private educacionS: EducacionService, private router: Router) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onCreate(): void{
     const educacion = new Educacion(this.nombreE, this.descripcionE);

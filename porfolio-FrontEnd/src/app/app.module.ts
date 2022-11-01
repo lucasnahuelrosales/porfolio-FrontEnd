@@ -65,6 +65,9 @@ import { NewproyectoComponent } from './components/proyecto/newproyecto.componen
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage())
   ],
+  exports: [
+
+  ],
   providers: [
     interceptorProvider
   ],

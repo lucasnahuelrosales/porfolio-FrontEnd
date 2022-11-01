@@ -1,16 +1,16 @@
 <div class="contenedor">
     <div class="imagen">
-        <img src={{persona.img}} id="fotodeperfil">
+        <img src={{persona?.img}} id="fotodeperfil">
     </div>
     <div class="texto primero">
-        <h1 id="nombre">{{persona.nombre}} {{persona.apellido}}</h1>
+        <h1 id="nombre">{{persona?.nombre}} {{persona?.apellido}}</h1>
         <p>Full Stack Developer Jr</p>
     </div>
     <div class="texto segundo">
         <h1>Acerca de mi</h1>
-        <p>{{persona.descripcion}}</p>
+        <p>{{persona?.descripcion}}</p>
     </div>
 </div>
 <button type="button" class="btn btn-dark" routerLink="/editacercade/1" *ngIf="isLogged">
     Editar
-</button>   
+</button> 

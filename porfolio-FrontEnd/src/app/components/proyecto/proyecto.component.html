@@ -9,13 +9,11 @@
         <div class="tarjeta-botones" *ngFor="let Proyecto of proyecto">
             <div class="tarjeta">
                 <div>
-                    <img src={{Proyecto.imgP}} alt="imagen_porfolio">
+                    <img src={{Proyecto?.imgP}}  alt="imagen_porfolio">
                 </div>
                 <div class="nombre-descripcion">
                     <h2>{{Proyecto.nombreP}}</h2>
-                    <p>
-                        {{Proyecto.descripcionP}}
-                    </p>
+                    <p>{{Proyecto?.descripcionP}}</p>
                 </div>
             </div>
             <div class="botones" *ngIf="isLogged">
@@ -24,7 +22,7 @@
                 </button>
                 <button type="button" class="btn btn-danger" (click)="borrar(Proyecto.id)">
                     <i class="bi bi-trash"></i>
-                </button>  
+                </button>
             </div>
         </div>
     </div>

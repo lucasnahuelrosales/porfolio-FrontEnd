@@ -10,8 +10,12 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class ProyectoComponent implements OnInit {
   proyecto: Proyecto[] = [];
+  img: string;
 
-  constructor(private proyectoS: ProyectoService, private tokenService: TokenService) { }
+  constructor(private proyectoS: ProyectoService, private tokenService: TokenService) {
+    this.img = `{{Proyecto.imgP}}`;
+  }
+
   isLogged = false;
 
   ngOnInit(): void {
@@ -42,4 +46,5 @@ export class ProyectoComponent implements OnInit {
       )
     }
   }
+
 }
